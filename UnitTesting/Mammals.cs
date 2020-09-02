@@ -2,7 +2,8 @@
 {
     public class Mammals : Animal
     {
-        public bool Swimmer => true;
+        public virtual bool Cat { get;  }
+        public bool Swimmer => false;
         public bool fur => true;
 
 
@@ -13,8 +14,14 @@
         }
     }
 
-    public class Omnivores : Dinosaur
+    public class Omnivores : Mammals, IOmnivores
     {
+        public bool Frugivores => throw new System.NotImplementedException();
+
+        public int Strength => throw new System.NotImplementedException();
+
+        public bool Speed => throw new System.NotImplementedException();
+
         public override string TheEats()
         {
             base.TheEats();
@@ -24,7 +31,19 @@
 
     }
 
+   public class Lion : Carnivore, ICarnivore
+    {
+        public  bool Cat => true;
+
+        public int Speed => (int)95m;
+
+        public int Strength => 100;
+
+        public bool Claws => true;
+    }
 }
+
+
 
 
 
