@@ -53,7 +53,54 @@ namespace Lab06Tests
             Assert.False(Hippo.Swimmer);
 
         }
+
+        [Fact]
+
+        public void Is_a_cat()
+        {
+            Lion lion = new Lion();
+
+            Assert.True(lion.Cat);
+        }
+
+        [Fact]
+
+        public void Speed_of_Lion()
+        {
+            int Speed = (int)95m;
+
+            Assert.Equal(95m, Speed);
+        }
+
+        [Fact]
+
+        public void Strength_of_Lion()
+        {
+            int Strength = (int)100;
+
+            Assert.Equal(100, Strength);
+        }
+
+        [Fact]
+
+        public void Lion_has_claws()
+        {
+            Lion lion = new Lion();
+
+
+            Assert.True(lion.Claws);
+        }
+
+        [Fact]
+
+        public void Limpkin_has_feathers()
+        {
+            Birds limpkin = new Birds();
+
+            Assert.True(limpkin.feathers);
+        }
     }
+
 
 }
 
